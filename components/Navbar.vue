@@ -16,7 +16,9 @@ const showMenu = ref(false);
         "
       >
         <div class="flex items-center justify-between">
-          Logo
+          <NuxtLink to="/">
+            Logo
+          </NuxtLink>
           <!-- Mobile menu button -->
           <div @click="showMenu = !showMenu" class="flex md:hidden">
             <button
@@ -48,21 +50,18 @@ const showMenu = ref(false);
             md:mt-0
           "
         >
-          <NuxtLink to="/" class="text-sm cursor-pointer">
+          <NuxtLink to="/company" class="text-sm cursor-pointer">
             Company
           </NuxtLink>
           <NuxtLink to="/feature-films" class="text-sm cursor-pointer">
             Feature Films
           </NuxtLink>
-          <li class="text-sm cursor-pointer">
-            Television
-          </li>
-          <li class="text-sm cursor-pointer">
+          <NuxtLink to="/contact" class="text-sm cursor-pointer">
             Contact
-          </li>
-          <li class="text-sm cursor-pointer">
+          </NuxtLink>
+          <NuxtLink to="/team" class="text-sm cursor-pointer">
             Team
-          </li>
+          </NuxtLink>
         </ul>
       </nav>
     </div>

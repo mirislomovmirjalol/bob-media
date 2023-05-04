@@ -2,7 +2,6 @@
 const props = defineProps({
   title: String,
 });
-const route = useRoute();
 </script>
 
 <template>
@@ -24,8 +23,8 @@ const route = useRoute();
           </svg>
         </NuxtLink>
 
-        <h3>
-          {{ route.params.slug.join("/") }}
+        <h3 class="capitalize">
+          {{ title }}
         </h3>
         <span/>
       </nav>
