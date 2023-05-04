@@ -2,7 +2,7 @@
 
 ## Demo
 
-bob-media.netlify.app
+https://bob-media.netlify.app/
 
 ## Setup
 
