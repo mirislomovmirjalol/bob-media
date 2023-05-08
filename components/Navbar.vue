@@ -24,15 +24,15 @@ const links = [
 </script>
 
 <template>
-  <div>
+  <div class="min-w-fit">
     <div class="flex flex-col">
-      <NuxtLink class="font-extrabold text-7xl" to="/">
+      <NuxtLink class="font-extrabold text-3xl" to="/">
         Logo
       </NuxtLink>
 
       <div class="my-24">
         <ul class="font-bold">
-          <li v-for="link in links" class="my-2">
+          <li v-for="link in links" class="my-2 text-xs md:text-base">
             <NuxtLink :to="link.path" activeClass="active">
               {{ link.name }}
             </NuxtLink>

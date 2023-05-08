@@ -3,8 +3,8 @@
     <img alt="" class="absolute" src="https://www.dnafilms.com/images/dna_bg_1.jpg?crc=4223266470">
     <div class="min-h-screen backdrop-blur-xl">
       <div class="container mx-auto py-48 px-4 overflow-auto">
-        <div class="flex flex-row flex-nowrap space-x-32 overflow-auto">
-          <Navbar class="w-96"/>
+        <div class="flex flex-row flex-nowrap md:space-x-32 space-x-12 overflow-auto">
+          <Navbar />
           <NuxtPage/>
         </div>
       </div>
@@ -22,11 +22,15 @@ html {
 }
 
 h1 {
-  @apply text-4xl text-white;
+  @apply md:text-4xl text-xl text-white;
 }
 
 h3 {
   @apply text-2xl font-medium;
+}
+
+h5 {
+  @apply md:text-base text-xs font-medium;
 }
 
 p {

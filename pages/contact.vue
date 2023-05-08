@@ -1,6 +1,6 @@
 <template>
   <div class="w-full md:min-w-[30%] min-w-[90%] font-bold">
-    <div class="flex flex-row justify-between w-full my-32">
+    <div class="flex flex-row justify-between w-full">
       <h5>
         BOB Media <br>
         The Forge <br><br>

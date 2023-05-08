@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full md:min-w-[30%] min-w-[90%] font-bold">
+  <div class="w-full md:min-w-[30%] min-w-[50%] font-bold">
     <ContentList path="/feature-work">
       <template #default="{ list }">
         <NuxtLink v-for="item in list" :to="item._path" activeClass="active" class="hover:text-yellow-500 cursor-pointer">
