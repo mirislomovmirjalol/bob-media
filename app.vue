@@ -1,11 +1,11 @@
 <template>
   <div class="text-white">
-    <img class="absolute" src="https://www.dnafilms.com/images/dna_bg_1.jpg?crc=4223266470" alt="">
+    <img alt="" class="absolute" src="https://www.dnafilms.com/images/dna_bg_1.jpg?crc=4223266470">
     <div class="min-h-screen backdrop-blur-xl">
       <div class="container mx-auto py-48 px-4 overflow-auto">
         <div class="flex flex-row flex-nowrap space-x-32 overflow-auto">
-          <Navbar class="w-96" />
-          <NuxtPage />
+          <Navbar class="w-96"/>
+          <NuxtPage/>
         </div>
       </div>
     </div>
@@ -35,17 +35,6 @@ p {
 
 a {
   @apply hover:text-yellow-500;
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.4s;
-}
-
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  filter: blur(1rem);
 }
 
 iframe {
