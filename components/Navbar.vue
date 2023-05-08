@@ -1,71 +1,50 @@
-<script lang="ts" setup xmlns:x-transition="http://www.w3.org/1999/xhtml">
-const showMenu = ref(false);
+<script lang="ts" setup>
+const links = [
+  {
+    name: 'Company',
+    path: '/company',
+  },
+  {
+    name: 'Our filming and production process',
+    path: '/our-filming-and-production-process',
+  },
+  {
+    name: 'Feature Work',
+    path: '/feature-work',
+  },
+  {
+    name: 'Event Promotional Videos',
+    path: 'event-promotional-videos',
+  },
+  {
+    name: 'Contact',
+    path: '/contact',
+  }
+]
 </script>
 
 <template>
   <div>
-    <div class="text-white">
-      <nav
-          class="
-          container
-          px-6
-          py-8
-          mx-auto
-          md:flex md:justify-between md:items-center
-          border-b border-white
-        "
-      >
-        <div class="flex items-center justify-between">
-          <NuxtLink to="/">
-            Logo
-          </NuxtLink>
-          <!-- Mobile menu button -->
-          <div @click="showMenu = !showMenu" class="flex md:hidden">
-            <button
-                type="button"
-            >
-              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                <path
-                    fill-rule="evenodd"
-                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-        </div>
+    <div class="flex flex-col">
+      <NuxtLink class="font-extrabold text-7xl" to="/">
+        Logo
+      </NuxtLink>
 
-
-        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-        <ul
-            :class="showMenu ? 'flex' : 'hidden'"
-            class="
-            flex-col
-            mt-8
-            space-y-4
-            md:flex
-            md:space-y-0
-            md:flex-row
-            md:items-center
-            md:space-x-10
-            md:mt-0
-          "
-        >
-          <NuxtLink to="/company" class="text-sm cursor-pointer">
-            Company
-          </NuxtLink>
-          <NuxtLink to="/feature-films" class="text-sm cursor-pointer">
-            Feature Films
-          </NuxtLink>
-          <NuxtLink to="/contact" class="text-sm cursor-pointer">
-            Contact
-          </NuxtLink>
-          <NuxtLink to="/team" class="text-sm cursor-pointer">
-            Team
-          </NuxtLink>
+      <div class="my-24">
+        <ul class="font-bold">
+          <li v-for="link in links" class="my-2">
+            <NuxtLink :to="link.path" activeClass="active">
+              {{ link.name }}
+            </NuxtLink>
+          </li>
         </ul>
-      </nav>
+      </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style>
+.active {
+  color: #F59E0B;
+}
+</style>
